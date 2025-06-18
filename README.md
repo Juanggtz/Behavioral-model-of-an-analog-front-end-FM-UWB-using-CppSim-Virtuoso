@@ -4,19 +4,18 @@
 This repository has the codes used for the a behavioral model of
 transceiver FM-UWB.
 
-The name of the paper is: <p style:"color: red">
-  Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso
-</p>
+The name of the paper is: 
 
-<p style="color: red;">Este texto está en rojo usando HTML dentro de Markdown.</p>
-
+**Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso**
 </div>
 
-<div style="color: green; background-color: yellow;">
-  Texto verde sobre fondo amarillo
-</div>
 
-Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)
+
+
+The paper was written by:
+
+
+**Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)**
 
 <div align='justify'>
 He was born in Puebla, 1997. He received the B.Sc. degree in 
@@ -28,7 +27,7 @@ Benemérita Universidad Autónoma de Puebla (BUAP). His research interests
 are systems radio frequency design for wireless communications.
 </div>
 
-Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)
+**Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)**
 
 <div align='justify'>  
 He was born in Mexico. He received the M.Sc. and Ph.D. degrees from the 
@@ -45,7 +44,7 @@ micropower management circuits. He participates as an Associate Editor
 of IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS—II: EXPRESS BRIEFS.
 </div>
 
-Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)
+**Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)**
 
 <div align='justify'>  
 He received the PhD degree in Electronics 
