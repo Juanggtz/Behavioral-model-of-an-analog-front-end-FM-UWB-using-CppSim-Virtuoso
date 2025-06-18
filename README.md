@@ -1,9 +1,9 @@
 # Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso
 
-This repository has the codes used for the a behavioral model of 
+This repository has the codes used for the a behavioral model of
 transceiver FM-UWB, the authores that design this system are:
 
-Juan C. Garcia Gutierrez:
+Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)
 
 He was born in Puebla, 1997. He received the B.Sc. degree in 
 mechatronics engineering from Benemérita Universidad Autónoma de Puebla 
@@ -13,7 +13,7 @@ Electronics. At the time, he is studying the M.Sc. degree from
 Benemérita Universidad Autónoma de Puebla (BUAP). His research interests 
 are systems radio frequency design for wireless communications.
 
-Victor Rodolfo Gonzalez Diaz
+Victor R. Gonzalez Diaz
 
 He was born in Mexico. He received the M.Sc. and Ph.D. degrees from the 
 National Institute of Astrophysics, Optics and Electronics (INAOE), 
