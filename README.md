@@ -1,8 +1,14 @@
 # Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso
 <div align='justify'>
 This repository has the codes used for the a behavioral model of
-transceiver FM-UWB, the authores that design this system are:
+transceiver FM-UWB.
+
+The name of the paper is: <p style:"color: red">
+  Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso
+</p>
 </div>
+
+
 
 Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)
 
@@ -16,8 +22,9 @@ Benemérita Universidad Autónoma de Puebla (BUAP). His research interests
 are systems radio frequency design for wireless communications.
 </div>
 
-Victor R. Gonzalez Diaz
+Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)
 
+<div align='justify'>  
 He was born in Mexico. He received the M.Sc. and Ph.D. degrees from the 
 National Institute of Astrophysics, Optics and Electronics (INAOE), 
 Puebla, Mexico, in 2005 and 2009, respectively. He collaborated as a 
@@ -30,9 +37,11 @@ design of analog and mixed-signal integrated circuits focusing on
 analog-to-digital converter design, frequency synthesizers, and 
 micropower management circuits. He participates as an Associate Editor 
 of IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS—II: EXPRESS BRIEFS.
+</div>
 
-Luis A. Sanchez Gasparino 
+Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)
 
+<div align='justify'>  
 He received the PhD degree in Electronics 
 Sciences from the Instituto Nacional de Astrofísica, Óptica y 
 Electrónica (INAOE), Puebla, Mexico, in 2011. His doctoral work was on 
@@ -53,7 +62,9 @@ reviewer for high-impact journals. His research focuses on Electronic
 Design Automation (EDA) tools, analog, mixed-mode, and RF circuit 
 design, and next-generation wireless systems like IoT and 5G, 
 particularly in automotive applications.
+</div>
 
+<div align='justify'>  
 CppSim is a simulation tool for modeling analog and digital systems, 
 especially useful for the development and analysis of electronic 
 circuits and communication front-ends. It facilitates the integration of 
@@ -70,6 +81,6 @@ To integrate a code block into CppSim, create a new C++ source file with
 the block's logic, then include it in the project and connect it to 
 other modules via the defined signals. Compile the project and run the 
 simulation to verify the behavior of the integrated block.
-
+</div>
 
 
