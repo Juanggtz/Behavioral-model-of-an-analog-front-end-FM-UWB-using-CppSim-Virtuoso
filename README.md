@@ -1,91 +1,116 @@
-# Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso
 
-<div align='justify'>
-This repository has the codes used for the a behavioral model of
-transceiver FM-UWB.
+# Behavioral Model of an Analog Front-End FM-UWB Using CppSim Virtuoso
 
-The name of the paper is: 
+This repository contains the simulation codes for a behavioral model of an FM-UWB transceiver, implemented and evaluated using CppSim and Virtuoso.
 
-**Behavioral-model-of-an-analog-front-end-FM-UWB-using-CppSim-Virtuoso**
-</div>
+The corresponding paper is titled:  
+**Behavioral Model of an Analog Front-End FM-UWB Using CppSim Virtuoso**
 
+---
 
+## 📄 File Descriptions
 
+The repository includes various functional blocks used in the system-level simulation:
 
-The paper was written by:
+- **`add2`**: Two-input adder block  
+- **`BPF_BUTTERWORTH`**: Band-pass filter with a Butterworth response  
+- **`Comparator`**: Signal comparator (binary output)  
+- **`constant`**: Constant value generator  
+- **`gain`**: Signal gain amplifier  
+- **`LPF_BUTTERWORTH`**: Low-pass Butterworth filter  
+- **`lpf_first_order`**: First-order low-pass filter  
+- **`noise`**: Noise source (e.g., thermal or Gaussian noise)  
+- **`PA`**: Power amplifier block  
+- **`Rectifier`**: Signal rectifier (half or full-wave)  
+- **`signal_source`**: General-purpose signal source (e.g., sinusoidal or pulse)  
+- **`Sub_Carrier`**: Sub-carrier generator for modulation  
+- **`sub2`**: Subtractor (version 2)  
+- **`vco`**: Voltage Controlled Oscillator  
+- **`vco_noise`**: VCO with noise modeling (phase noise or jitter)
 
+---
 
-**Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)**
+## 🔧 Description of `BPF_BUTTERWORTH` Block
 
-<div align='justify'>
-He was born in Puebla, 1997. He received the B.Sc. degree in 
-mechatronics engineering from Benemérita Universidad Autónoma de Puebla 
-(BUAP) in 2021. He collaborated in the characterization of chips at the 
-Circuits and Systems Characterization Laboratory, Faculty of 
-Electronics. At the time, he is studying the M.Sc. degree from 
-Benemérita Universidad Autónoma de Puebla (BUAP). His research interests 
-are systems radio frequency design for wireless communications.
-</div>
+### Module: `BPF_BUTTERWORTH`
 
-**Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)**
+This module implements a Butterworth band-pass filter using a Laplace-domain transfer function.
 
-<div align='justify'>  
-He was born in Mexico. He received the M.Sc. and Ph.D. degrees from the 
-National Institute of Astrophysics, Optics and Electronics (INAOE), 
-Puebla, Mexico, in 2005 and 2009, respectively. He collaborated as a 
-Postdoctoral Fellow with the Microsystems Laboratory, University of 
-Pavia, Italy, from 2009 to 2010. He has been a full-time Professor with 
-the Faculty of Electronics, BUAP, Puebla, since 2011. He is currently 
-the Founder and the Head of the Circuits and Systems Characterization 
-Laboratory, Faculty of Electronics. His research interests include the 
-design of analog and mixed-signal integrated circuits focusing on 
-analog-to-digital converter design, frequency synthesizers, and 
-micropower management circuits. He participates as an Associate Editor 
-of IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS—II: EXPRESS BRIEFS.
-</div>
+### Parameters
+- `wo` (double): Center angular frequency in radians/second  
+- `in` (double): Input signal  
+- `out` (double): Filtered output signal
 
-**Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)**
+### Transfer Function
 
-<div align='justify'>  
-He received the PhD degree in Electronics 
-Sciences from the Instituto Nacional de Astrofísica, Óptica y 
-Electrónica (INAOE), Puebla, Mexico, in 2011. His doctoral work was on 
-the subject of CMOS Power Amplifiers for wireless communications. During 
-2009 he was a visiting scholar in the Integrated Circuits Design (ICD) 
-group at the University of Twente, in the Netherlands. In 2011 he joined 
-the Electronics and Telecommunications department at the Universidad 
-Politécnica de Puebla, in Puebla, Mexico, where he served as the head of 
-the Electronics group for about seven years. Since 2017 to date, he is 
-with the Electronics Faculty at Benemérita Universidad Autónoma de 
-Puebla (BUAP), in Puebla, Mexico, as a full professor and member of the 
-Photonics and Nanooptics Systems research group. He is a regular member 
-(level-1) of the National Systems for Researchers (SNI), which is a 
-top‐level program founded by the Mexican Government through the National 
-Council of Human Studies, Science and Technology (CONAHCyT) from Mexico. 
-He has published over 60 scientific works and regularly serves as a 
-reviewer for high-impact journals. His research focuses on Electronic 
-Design Automation (EDA) tools, analog, mixed-mode, and RF circuit 
-design, and next-generation wireless systems like IoT and 5G, 
-particularly in automotive applications.
-</div>
+- **Numerator**: (W × 2π / 0.7) × s  
+- **Denominator**: s² + ((2πW)/0.7) × s + (2πW)²
 
-<div align='justify'>  
-CppSim is a simulation tool for modeling analog and digital systems, 
-especially useful for the development and analysis of electronic 
-circuits and communication front-ends. It facilitates the integration of 
-behavioral models and enables accurate simulations in design 
-environments such as Virtuoso.
+Where:
+- *s*: Complex Laplace variable  
+- *W*: Center frequency  
+- *Ts*: Integration or sampling time constant
 
-To install CppSim, download the package from its official website or 
-repository (https://www.cppsim.com/download.html), unzip the file, and 
-follow the instructions specific to your operating system. Make sure you 
-have a C++-compatible compiler and the necessary dependencies for the 
-simulation installed.
+The 1/0.7 factor adjusts the filter bandwidth to achieve a smooth Butterworth response.
 
-To integrate a code block into CppSim, create a new C++ source file with 
-the block's logic, then include it in the project and connect it to 
-other modules via the defined signals. Compile the project and run the 
-simulation to verify the behavior of the integrated block.
-</div>
+### Functionality
+1. Receives input signal `in`
+2. Applies the defined band-pass filtering
+3. Outputs the filtered signal as `out`
 
+### Core Code
 
+```c
+module: BPF_BUTTERWORTH
+description: 
+timing_sensitivity: 
+parameters:  double wo
+inputs:  double in
+outputs:  double out
+classes:  Filter filt("(W*2*pi/0.7)*s","s^2 + ((2*pi*W)/0.7)*s + (2*pi*W)^2","W,Ts",wo,Ts);
+static_variables:  
+init:  
+end:  
+code:  
+
+filt.inp(in);
+out = filt.out;
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code:  
+```
+
+---
+
+## ✍️ Authors
+
+### Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)
+
+Born in Puebla in 1997. He earned his B.Sc. in Mechatronics Engineering from BUAP in 2021. He collaborated on chip characterization at the Circuits and Systems Characterization Laboratory, Faculty of Electronics. Currently pursuing his M.Sc. at BUAP, his interests include RF system design for wireless communications.
+
+### Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)
+
+Born in Mexico. He received M.Sc. and Ph.D. degrees from INAOE in 2005 and 2009, respectively. He was a Postdoctoral Fellow at the University of Pavia, Italy (2009–2010). He is a full-time Professor at BUAP and leads the Circuits and Systems Characterization Lab. His research includes ADCs, frequency synthesizers, and micropower circuits. Associate Editor for IEEE TCAS-II.
+
+### Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)
+
+He obtained his Ph.D. in Electronics Sciences from INAOE in 2011, specializing in CMOS Power Amplifiers for wireless systems. He was a visiting scholar at the University of Twente in 2009. He led the Electronics group at Universidad Politécnica de Puebla (2011–2017). Currently a professor at BUAP and member of the Photonics and Nanooptics Systems group. Member of Mexico’s SNI (level-1), with over 60 publications. His work focuses on EDA tools, analog/RF design, and future wireless systems (IoT, 5G).
+
+---
+
+## 🛠️ About CppSim
+
+CppSim is a simulation environment for analog and digital systems. It is particularly well-suited for developing and testing communication front-ends and circuit-level blocks.
+
+To install CppSim:
+1. Visit [cppsim.com](https://www.cppsim.com/download.html)
+2. Download and unzip the package
+3. Follow the platform-specific installation guide
+4. Ensure you have a C++ compiler and required dependencies
+
+### Integrating a Custom Block
+To add your own block:
+1. Create a new C++ file containing your logic
+2. Add it to the CppSim project and connect via signal definitions
+3. Compile and run the simulation to validate functionality
