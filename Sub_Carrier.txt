@@ -1,0 +1,35 @@
+module: Sub_Carrie
+description: 
+timing_sensitivity: 
+parameters:  double amplitud, double frecuencia_1
+             double frecuencia_2
+inputs:  double in
+outputs:  double out
+classes:  
+static_variables:  double phase_step, double phase
+init:  
+out = 0.0;
+phase = 0.0;
+phase_step = 0.0;
+
+end:  
+code:  
+
+       if (in >= 0.5)
+	  phase_step = frecuencia_1*Ts;
+       else if (in < 0.5)
+	  phase_step = frecuencia_2*Ts;
+
+       phase += phase_step;
+       
+       if (phase >=0.5)
+	  phase -= 1.0;
+	  
+       out = 4.0*amplitud*fabs(phase)-amplitud;
+
+
+
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code:  

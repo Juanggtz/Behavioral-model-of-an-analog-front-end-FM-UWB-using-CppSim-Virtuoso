@@ -1,0 +1,23 @@
+module: Comparator
+description: 
+timing_sensitivity: 
+parameters:  double threshold
+inputs:  double in
+outputs:  double out
+classes:  
+static_variables:  
+init:  
+
+
+end:  
+code:  
+       
+	if (in > threshold)
+		out = 1;
+	else
+		out = 0;
+
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code: 

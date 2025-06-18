@@ -1,0 +1,22 @@
+module: LPF_BUTTERWORTH
+description: 
+timing_sensitivity: 
+parameters:  double k, double wo
+inputs:  double in
+outputs:  double out
+classes:  Filter filt("G*(2*pi*W)^2","s^2 + ((2*pi*W)/0.7)*s + (2*pi*W)^2","G,W,Ts",k,wo,Ts);
+static_variables:  
+init:  
+
+
+end:  
+code:  
+
+filt.inp(in);
+out = filt.out;
+
+
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code: 

@@ -1,0 +1,22 @@
+module: BPF_BUTTERWORTH
+description: 
+timing_sensitivity: 
+parameters:  double wo
+inputs:  double in
+outputs:  double out
+classes:  Filter filt("(W*2*pi/0.7)*s","s^2 + ((2*pi*W)/0.7)*s + (2*pi*W)^2","W,Ts",wo,Ts);
+static_variables:  
+init:  
+
+
+end:  
+code:  
+
+filt.inp(in);
+out = filt.out;
+
+
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code:  

@@ -1,0 +1,22 @@
+module: Rectifier
+description: 
+timing_sensitivity: 
+parameters:  
+inputs:  double in
+outputs:  double out
+classes:  
+static_variables:  
+init:  
+
+
+end:  
+code:  
+       if(in<0)
+              out = 0;
+       else
+              out = in;
+
+electrical_element:  
+functions:  
+custom_classes_definition:  
+custom_classes_code:  
