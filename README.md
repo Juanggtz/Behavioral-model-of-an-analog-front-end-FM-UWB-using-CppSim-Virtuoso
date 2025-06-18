@@ -6,6 +6,7 @@ transceiver FM-UWB, the authores that design this system are:
 
 Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841)
 
+<div align='justify'>
 He was born in Puebla, 1997. He received the B.Sc. degree in 
 mechatronics engineering from Benemérita Universidad Autónoma de Puebla 
 (BUAP) in 2021. He collaborated in the characterization of chips at the 
@@ -13,6 +14,7 @@ Circuits and Systems Characterization Laboratory, Faculty of
 Electronics. At the time, he is studying the M.Sc. degree from 
 Benemérita Universidad Autónoma de Puebla (BUAP). His research interests 
 are systems radio frequency design for wireless communications.
+</div>
 
 Victor R. Gonzalez Diaz
 
