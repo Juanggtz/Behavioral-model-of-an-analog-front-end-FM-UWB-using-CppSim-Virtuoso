@@ -88,7 +88,6 @@ custom_classes_code:
 ## ✍️ Authors
 
 ### Juan C. Garcia Gutierrez (ORCID: [0009-0003-0434-2841](https://orcid.org/0009-0003-0434-2841)
-)
 
 Born in Puebla in 1997. He earned his B.Sc. in Mechatronics Engineering from BUAP in 2021. He collaborated on chip characterization at the Circuits and Systems Characterization Laboratory, Faculty of Electronics. Currently pursuing his M.Sc. at BUAP, his interests include RF system design for wireless communications.
 
