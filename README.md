@@ -87,16 +87,16 @@ custom_classes_code:
 
 ## ✍️ Authors
 
-### Juan C. Garcia Gutierrez (ORCID: 0009-0003-0434-2841 [https://orcid.org/0009-0003-0434-2841](https://orcid.org/0009-0003-0434-2841)
+### Juan C. Garcia Gutierrez (ORCID: [0009-0003-0434-2841](https://orcid.org/0009-0003-0434-2841)
 )
 
 Born in Puebla in 1997. He earned his B.Sc. in Mechatronics Engineering from BUAP in 2021. He collaborated on chip characterization at the Circuits and Systems Characterization Laboratory, Faculty of Electronics. Currently pursuing his M.Sc. at BUAP, his interests include RF system design for wireless communications.
 
-### Victor R. Gonzalez Diaz (ORCID: 0009-0003-0434-2841)
+### Victor R. Gonzalez Diaz (ORCID: [0000-0002-2931-8368](https://orcid.org/0000-0002-2931-8368))
 
 Born in Mexico. He received M.Sc. and Ph.D. degrees from INAOE in 2005 and 2009, respectively. He was a Postdoctoral Fellow at the University of Pavia, Italy (2009–2010). He is a full-time Professor at BUAP and leads the Circuits and Systems Characterization Lab. His research includes ADCs, frequency synthesizers, and micropower circuits. Associate Editor for IEEE TCAS-II.
 
-### Luis A. Sanchez Gasparino (ORCID: 0009-0003-0434-2841)
+### Luis A. Sanchez Gasparino (ORCID: [000-0002-3899-0746](https://orcid.org/0000-0002-3899-0746))
 
 He obtained his Ph.D. in Electronics Sciences from INAOE in 2011, specializing in CMOS Power Amplifiers for wireless systems. He was a visiting scholar at the University of Twente in 2009. He led the Electronics group at Universidad Politécnica de Puebla (2011–2017). Currently a professor at BUAP and member of the Photonics and Nanooptics Systems group. Member of Mexico’s SNI (level-1), with over 60 publications. His work focuses on EDA tools, analog/RF design, and future wireless systems (IoT, 5G).
 
